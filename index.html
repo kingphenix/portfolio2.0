@@ -1,0 +1,233 @@
+<html lang="en" class="antialiased">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joseph Pheenix - Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap"
+    rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Custom Noise Background */
+    .bg-noise {
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+    }
+
+    /* Star field simulation */
+    .stars {
+      background-image:
+        radial-gradient(1px 1px at 20px 30px, #eee, rgba(0, 0, 0, 0)),
+        radial-gradient(1px 1px at 40px 70px, #fff, rgba(0, 0, 0, 0)),
+        radial-gradient(1px 1px at 50px 160px, #ddd, rgba(0, 0, 0, 0)),
+        radial-gradient(1px 1px at 90px 40px, #fff, rgba(0, 0, 0, 0)),
+        radial-gradient(1px 1px at 130px 80px, #fff, rgba(0, 0, 0, 0)),
+        radial-gradient(1px 1px at 160px 120px, #ddd, rgba(0, 0, 0, 0));
+      background-size: 200px 200px;
+      opacity: 0.3;
+    }
+  </style>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            gray: {
+              850: '#1f1f1f',
+              950: '#0a0a0a',
+            }
+          },
+          animation: {
+            'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+            'fade-in-up-delayed': 'fadeInUp 1s ease-out 0.3s forwards',
+          },
+          keyframes: {
+            fadeInUp: {
+              '0%': { opacity: '0', transform: 'translateY(20px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body
+  class="bg-[#050505] text-gray-200 min-h-screen relative overflow-x-hidden selection:bg-white/20 selection:text-white">
+
+  <!-- Background Layers -->
+  <div class="fixed inset-0 pointer-events-none z-0">
+    <div
+      class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-900/20 via-[#050505] to-black">
+    </div>
+    <div class="absolute inset-0 bg-noise opacity-[0.15]"></div>
+    <div class="absolute inset-0 stars opacity-40"></div>
+  </div>
+
+  <!-- Mobile Navigation (Top) -->
+  <nav
+    class="fixed top-0 left-0 right-0 z-50 flex justify-between items-center p-6 md:hidden bg-gradient-to-b from-black/80 to-transparent backdrop-blur-sm">
+    <span class="font-mono text-sm tracking-widest text-gray-400">JP.</span>
+    <button class="text-gray-400 hover:text-white transition-colors">
+      <i data-lucide="menu" class="w-6 h-6"></i>
+    </button>
+  </nav>
+
+  <!-- Desktop Sidebar Navigation -->
+  <aside
+    class="fixed left-6 top-1/2 -translate-y-1/2 z-50 hidden md:flex flex-col items-center gap-8 py-6 px-3 rounded-full bg-white/[0.03] border border-white/[0.08] backdrop-blur-xl shadow-2xl">
+    <a href="#"
+      class="group relative flex items-center justify-center w-10 h-10 text-gray-400 hover:text-white transition-colors duration-300">
+      <i data-lucide="home" class="w-5 h-5 stroke-[1.5]"></i>
+      <span
+        class="absolute left-14 bg-gray-800 text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap border border-white/10 pointer-events-none">Home</span>
+    </a>
+    <a href="#about"
+      class="group relative flex items-center justify-center w-10 h-10 text-gray-400 hover:text-white transition-colors duration-300">
+      <i data-lucide="briefcase" class="w-5 h-5 stroke-[1.5]"></i>
+      <span
+        class="absolute left-14 bg-gray-800 text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap border border-white/10 pointer-events-none">Projects</span>
+    </a>
+    <a href="#about"
+      class="group relative flex items-center justify-center w-10 h-10 text-gray-400 hover:text-white transition-colors duration-300">
+      <i data-lucide="user" class="w-5 h-5 stroke-[1.5]"></i>
+      <span
+        class="absolute left-14 bg-gray-800 text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap border border-white/10 pointer-events-none">About</span>
+    </a>
+    <a href="#"
+      class="group relative flex items-center justify-center w-10 h-10 text-gray-400 hover:text-white transition-colors duration-300">
+      <i data-lucide="mail" class="w-5 h-5 stroke-[1.5]"></i>
+      <span
+        class="absolute left-14 bg-gray-800 text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap border border-white/10 pointer-events-none">Contact</span>
+    </a>
+  </aside>
+
+  <!-- Status Badge -->
+  <div class="absolute top-6 right-6 md:top-12 md:right-12 z-40">
+    <a href="#"
+      class="inline-flex items-center gap-3 px-4 py-2 md:px-5 md:py-2.5 rounded-full bg-white/[0.03] border border-white/[0.08] backdrop-blur-md text-xs font-mono tracking-widest text-gray-400 hover:bg-white/[0.08] hover:text-gray-200 transition-all duration-300 group">
+      <span class="relative flex h-2 w-2">
+        <span
+          class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75 duration-1000"></span>
+        <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+      </span>
+      AVAILABLE FOR PROJECTS
+    </a>
+  </div>
+
+  <!-- Main Content Area -->
+  <main
+    class="relative z-10 flex flex-col justify-center min-h-screen w-full px-6 pt-20 pb-12 md:pl-32 md:pr-12 max-w-[1800px] mx-auto">
+
+    <!-- Intro -->
+    <div class="mb-2 md:mb-4 ml-1 md:ml-2 opacity-0 animate-fade-in-up">
+      <p class="font-mono text-base md:text-lg text-gray-400 tracking-tight">
+        Hi, I'm Joseph Pheenix
+      </p>
+    </div>
+
+    <!-- Massive Hero Title -->
+    <div
+      class="flex flex-col font-bold text-[#E6E6E6] uppercase leading-[0.85] tracking-tighter select-none mix-blend-screen opacity-0 animate-fade-in-up-delayed">
+      <span class="text-[13vw] md:text-[11vw] lg:text-[10vw]">Artistic</span>
+      <span class="text-[13vw] md:text-[11vw] lg:text-[10vw]">Front-</span>
+      <span class="text-[13vw] md:text-[11vw] lg:text-[10vw]">End</span>
+      <span class="text-[13vw] md:text-[11vw] lg:text-[10vw]">Developer</span>
+    </div>
+
+  </main>
+
+  <!-- About Section -->
+  <section id="about"
+    class="relative z-10 min-h-screen w-full px-6 py-20 md:pl-32 md:pr-12 max-w-[1800px] mx-auto flex flex-col md:flex-row items-center gap-12 md:gap-24">
+
+    <!-- Profile Image -->
+    <div class="w-full md:w-1/2 relative group">
+      <div
+        class="relative aspect-square overflow-hidden rounded-sm grayscale hover:grayscale-0 transition-all duration-700">
+        <!-- Using a placeholder that matches the vibe (red lighting) -->
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop"
+          alt="Profile"
+          class="object-cover w-full h-full mix-blend-luminosity opacity-80 group-hover:opacity-100 group-hover:mix-blend-normal transition-all duration-700">
+        <div class="absolute inset-0 bg-gradient-to-tr from-red-900/40 to-transparent mix-blend-overlay"></div>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="w-full md:w-1/2 flex flex-col gap-10">
+
+      <!-- Divider/Intro -->
+      <div class="flex items-center gap-4 text-gray-500 font-mono text-sm">
+        <span>*</span>
+        <div class="h-[1px] w-full bg-gray-800"></div>
+      </div>
+
+      <!-- Bio -->
+      <p class="font-mono text-lg md:text-xl leading-relaxed text-gray-300">
+        I design and build beautiful, high-performing digital products. I craft user interfaces with clean design
+        systems and bring them to life with code, creating fast, responsive, and immersive experiences for startups,
+        agencies, and creative teams.
+      </p>
+
+      <!-- Lists -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 font-mono text-sm">
+        <div class="flex flex-col gap-4">
+          <h3 class="text-white font-semibold tracking-wide">Specialties</h3>
+          <ul class="flex flex-col gap-2 text-gray-400">
+            <li>• UI/UX Design</li>
+            <li>• Front-End Development</li>
+            <li>• Design Systems & Prototyping</li>
+          </ul>
+        </div>
+        <div class="flex flex-col gap-4">
+          <h3 class="text-white font-semibold tracking-wide">Industries</h3>
+          <ul class="flex flex-col gap-2 text-gray-400">
+            <li>• SaaS & Tech Startups</li>
+            <li>• Creative Agencies</li>
+            <li>• Enterprise Solutions</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Buttons -->
+      <div class="flex flex-col sm:flex-row gap-6 mt-4">
+        <button
+          class="px-8 py-4 bg-cyan-900/20 border border-cyan-500/30 text-cyan-100 font-mono text-sm hover:bg-cyan-900/40 transition-colors rounded-sm">
+          View full portfolio
+        </button>
+        <button
+          class="px-8 py-4 bg-transparent border border-gray-800 text-gray-400 font-mono text-sm hover:border-gray-600 hover:text-white transition-colors rounded-sm">
+          View portfolio
+        </button>
+      </div>
+
+      <!-- Footer Note -->
+      <div class="flex items-center gap-3 text-gray-500 font-mono text-xs mt-4">
+        <i data-lucide="message-square" class="w-4 h-4"></i>
+        <span>Response within 24h</span>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Init Icons -->
+  <script>
+    lucide.createIcons();
+  </script>
+
+</body>
+
+</html>
