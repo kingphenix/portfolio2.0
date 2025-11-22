@@ -194,16 +194,84 @@
         </div>
       </div>
 
-      <!-- Buttons -->
-      <div class="flex flex-col sm:flex-row gap-6 mt-4">
-        <button
-          class="px-8 py-4 bg-cyan-100 dark:bg-cyan-900/20 border border-cyan-500/30 text-cyan-900 dark:text-cyan-100 font-mono text-sm hover:bg-cyan-200 dark:hover:bg-cyan-900/40 transition-colors rounded-sm">
-          View full portfolio
-        </button>
-        <button
-          class="px-8 py-4 bg-transparent border border-gray-300 dark:border-gray-800 text-gray-600 dark:text-gray-400 font-mono text-sm hover:border-gray-600 hover:text-black dark:hover:text-white transition-colors rounded-sm">
-          View portfolio
-        </button>
+      <!-- Tools Carousel -->
+      <div class="w-full overflow-hidden mt-8 relative">
+        <!-- Gradient Masks -->
+        <div
+          class="absolute left-0 top-0 bottom-0 w-12 z-10 bg-gradient-to-r from-gray-50 dark:from-[#050505] to-transparent transition-colors duration-300">
+        </div>
+        <div
+          class="absolute right-0 top-0 bottom-0 w-12 z-10 bg-gradient-to-l from-gray-50 dark:from-[#050505] to-transparent transition-colors duration-300">
+        </div>
+
+        <div class="flex w-max animate-marquee hover:[animation-play-state:paused]">
+          <!-- Set 1 -->
+          <div class="flex gap-8 px-4">
+            <i
+              class="devicon-react-original text-3xl text-gray-600 dark:text-gray-400 hover:text-[#61DAFB] transition-colors duration-300"></i>
+            <i
+              class="devicon-vuejs-plain text-3xl text-gray-600 dark:text-gray-400 hover:text-[#4FC08D] transition-colors duration-300"></i>
+            <i
+              class="devicon-angularjs-plain text-3xl text-gray-600 dark:text-gray-400 hover:text-[#DD0031] transition-colors duration-300"></i>
+            <i
+              class="devicon-svelte-plain text-3xl text-gray-600 dark:text-gray-400 hover:text-[#FF3E00] transition-colors duration-300"></i>
+            <i
+              class="devicon-nextjs-plain text-3xl text-gray-600 dark:text-gray-400 hover:text-white dark:hover:text-black transition-colors duration-300"></i>
+            <i
+              class="devicon-nuxtjs-plain text-3xl text-gray-600 dark:text-gray-400 hover:text-[#00DC82] transition-colors duration-300"></i>
+            <i
+              class="devicon-tailwindcss-original text-3xl text-gray-600 dark:text-gray-400 hover:text-[#06B6D4] transition-colors duration-300"></i>
+            <i
+              class="devicon-bootstrap-plain text-3xl text-gray-600 dark:text-gray-400 hover:text-[#7952B3] transition-colors duration-300"></i>
+            <i
+              class="devicon-sass-original text-3xl text-gray-600 dark:text-gray-400 hover:text-[#CC6699] transition-colors duration-300"></i>
+            <i
+              class="devicon-typescript-plain text-3xl text-gray-600 dark:text-gray-400 hover:text-[#3178C6] transition-colors duration-300"></i>
+            <i
+              class="devicon-javascript-plain text-3xl text-gray-600 dark:text-gray-400 hover:text-[#F7DF1E] transition-colors duration-300"></i>
+            <i
+              class="devicon-git-plain text-3xl text-gray-600 dark:text-gray-400 hover:text-[#F05032] transition-colors duration-300"></i>
+            <i
+              class="devicon-figma-plain text-3xl text-gray-600 dark:text-gray-400 hover:text-[#F24E1E] transition-colors duration-300"></i>
+            <i
+              class="devicon-docker-plain text-3xl text-gray-600 dark:text-gray-400 hover:text-[#2496ED] transition-colors duration-300"></i>
+            <i
+              class="devicon-nodejs-plain-wordmark text-3xl text-gray-600 dark:text-gray-400 hover:text-[#339933] transition-colors duration-300"></i>
+          </div>
+          <!-- Set 2 (Duplicate for infinite loop) -->
+          <div class="flex gap-8 px-4">
+            <i
+              class="devicon-react-original text-3xl text-gray-600 dark:text-gray-400 hover:text-[#61DAFB] transition-colors duration-300"></i>
+            <i
+              class="devicon-vuejs-plain text-3xl text-gray-600 dark:text-gray-400 hover:text-[#4FC08D] transition-colors duration-300"></i>
+            <i
+              class="devicon-angularjs-plain text-3xl text-gray-600 dark:text-gray-400 hover:text-[#DD0031] transition-colors duration-300"></i>
+            <i
+              class="devicon-svelte-plain text-3xl text-gray-600 dark:text-gray-400 hover:text-[#FF3E00] transition-colors duration-300"></i>
+            <i
+              class="devicon-nextjs-plain text-3xl text-gray-600 dark:text-gray-400 hover:text-white dark:hover:text-black transition-colors duration-300"></i>
+            <i
+              class="devicon-nuxtjs-plain text-3xl text-gray-600 dark:text-gray-400 hover:text-[#00DC82] transition-colors duration-300"></i>
+            <i
+              class="devicon-tailwindcss-original text-3xl text-gray-600 dark:text-gray-400 hover:text-[#06B6D4] transition-colors duration-300"></i>
+            <i
+              class="devicon-bootstrap-plain text-3xl text-gray-600 dark:text-gray-400 hover:text-[#7952B3] transition-colors duration-300"></i>
+            <i
+              class="devicon-sass-original text-3xl text-gray-600 dark:text-gray-400 hover:text-[#CC6699] transition-colors duration-300"></i>
+            <i
+              class="devicon-typescript-plain text-3xl text-gray-600 dark:text-gray-400 hover:text-[#3178C6] transition-colors duration-300"></i>
+            <i
+              class="devicon-javascript-plain text-3xl text-gray-600 dark:text-gray-400 hover:text-[#F7DF1E] transition-colors duration-300"></i>
+            <i
+              class="devicon-git-plain text-3xl text-gray-600 dark:text-gray-400 hover:text-[#F05032] transition-colors duration-300"></i>
+            <i
+              class="devicon-figma-plain text-3xl text-gray-600 dark:text-gray-400 hover:text-[#F24E1E] transition-colors duration-300"></i>
+            <i
+              class="devicon-docker-plain text-3xl text-gray-600 dark:text-gray-400 hover:text-[#2496ED] transition-colors duration-300"></i>
+            <i
+              class="devicon-nodejs-plain-wordmark text-3xl text-gray-600 dark:text-gray-400 hover:text-[#339933] transition-colors duration-300"></i>
+          </div>
+        </div>
       </div>
 
       <!-- Footer Note -->
@@ -415,33 +483,33 @@
   <section id="contact" class="relative z-10 w-full px-6 py-20 md:pl-32 md:pr-12 max-w-[1800px] mx-auto">
 
     <div
-      class="w-full bg-gray-900 dark:bg-white rounded-3xl p-8 md:p-16 lg:p-24 border border-black/[0.05] dark:border-white/[0.05] relative overflow-hidden group transition-colors duration-300">
+      class="w-full bg-white dark:bg-gray-900 rounded-3xl p-8 md:p-16 lg:p-24 border border-black/[0.05] dark:border-white/[0.05] relative overflow-hidden group transition-colors duration-300">
 
       <!-- Background Glow -->
       <div
-        class="absolute top-0 right-0 w-[500px] h-[500px] bg-emerald-500/10 dark:bg-emerald-500/5 blur-[120px] rounded-full pointer-events-none mix-blend-screen dark:mix-blend-multiply transition-opacity duration-300">
+        class="absolute top-0 right-0 w-[500px] h-[500px] bg-emerald-500/10 dark:bg-emerald-500/5 blur-[120px] rounded-full pointer-events-none mix-blend-multiply dark:mix-blend-screen transition-opacity duration-300">
       </div>
 
       <div class="relative z-10 flex flex-col gap-16 md:gap-24">
 
         <!-- Heading -->
         <h2
-          class="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-white dark:text-black transition-colors duration-300">
+          class="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-black dark:text-white transition-colors duration-300">
           Let's build <br>
-          <span class="text-gray-400 dark:text-gray-400">together.</span>
+          <span class="text-gray-400 dark:text-gray-600">together.</span>
         </h2>
 
         <!-- Grid Layout -->
         <div
-          class="flex flex-col md:flex-row justify-between gap-12 border-t border-white/10 dark:border-black/10 pt-12 transition-colors duration-300">
+          class="flex flex-col md:flex-row justify-between gap-12 border-t border-black/10 dark:border-white/10 pt-12 transition-colors duration-300">
 
           <!-- Email -->
           <div class="flex flex-col gap-4">
             <span class="text-gray-500 font-mono text-sm">Email</span>
             <a href="mailto:Josephpheenix10@gmail.com"
-              class="flex items-center gap-3 text-xl md:text-2xl text-white dark:text-black hover:text-emerald-400 dark:hover:text-emerald-600 transition-colors group/email">
+              class="flex items-center gap-3 text-xl md:text-2xl text-black dark:text-white hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors group/email">
               <i data-lucide="mail"
-                class="w-6 h-6 text-gray-400 group-hover/email:text-emerald-400 dark:group-hover/email:text-emerald-600 transition-colors"></i>
+                class="w-6 h-6 text-gray-400 group-hover/email:text-emerald-600 dark:group-hover/email:text-emerald-400 transition-colors"></i>
               <span>Josephpheenix10@gmail.com</span>
             </a>
           </div>
@@ -450,7 +518,7 @@
           <div class="flex flex-col gap-4 md:items-center">
             <span class="text-gray-500 font-mono text-sm">Schedule</span>
             <a href="+2347036497307"
-              class="inline-flex items-center gap-2 px-6 py-3 bg-white dark:bg-black text-black dark:text-white rounded-full font-medium hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors w-fit">
+              class="inline-flex items-center gap-2 px-6 py-3 bg-black dark:bg-white text-white dark:text-black rounded-full font-medium hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors w-fit">
               <i data-lucide="calendar" class="w-4 h-4"></i>
               <span>Book a call</span>
             </a>
@@ -461,15 +529,15 @@
             <span class="text-gray-500 font-mono text-sm">Social</span>
             <div class="flex gap-4">
               <a href="https://x.com/pheenix_x"
-                class="w-12 h-12 bg-white dark:bg-black rounded-full flex items-center justify-center text-black dark:text-white hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors">
+                class="w-12 h-12 bg-black dark:bg-white rounded-full flex items-center justify-center text-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors">
                 <i data-lucide="twitter" class="w-5 h-5"></i>
               </a>
               <a href="https://www.instagram.com/pheenix_x"
-                class="w-12 h-12 bg-white dark:bg-black rounded-full flex items-center justify-center text-black dark:text-white hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors">
+                class="w-12 h-12 bg-black dark:bg-white rounded-full flex items-center justify-center text-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors">
                 <i data-lucide="instagram" class="w-5 h-5"></i>
               </a>
               <a href="https://github.com/kingphenix"
-                class="w-12 h-12 bg-white dark:bg-black rounded-full flex items-center justify-center text-black dark:text-white hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors">
+                class="w-12 h-12 bg-black dark:bg-white rounded-full flex items-center justify-center text-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors">
                 <i data-lucide="github" class="w-5 h-5"></i>
               </a>
             </div>
