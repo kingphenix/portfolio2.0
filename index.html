@@ -96,17 +96,17 @@
     </a>
     <a href="#about"
       class="group relative flex items-center justify-center w-10 h-10 text-gray-400 hover:text-white transition-colors duration-300">
-      <i data-lucide="briefcase" class="w-5 h-5 stroke-[1.5]"></i>
-      <span
-        class="absolute left-14 bg-gray-800 text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap border border-white/10 pointer-events-none">Projects</span>
-    </a>
-    <a href="#about"
-      class="group relative flex items-center justify-center w-10 h-10 text-gray-400 hover:text-white transition-colors duration-300">
       <i data-lucide="user" class="w-5 h-5 stroke-[1.5]"></i>
       <span
         class="absolute left-14 bg-gray-800 text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap border border-white/10 pointer-events-none">About</span>
     </a>
-    <a href="#"
+    <a href="#projects"
+      class="group relative flex items-center justify-center w-10 h-10 text-gray-400 hover:text-white transition-colors duration-300">
+      <i data-lucide="briefcase" class="w-5 h-5 stroke-[1.5]"></i>
+      <span
+        class="absolute left-14 bg-gray-800 text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap border border-white/10 pointer-events-none">Projects</span>
+    </a>
+    <a href="#contact"
       class="group relative flex items-center justify-center w-10 h-10 text-gray-400 hover:text-white transition-colors duration-300">
       <i data-lucide="mail" class="w-5 h-5 stroke-[1.5]"></i>
       <span
@@ -222,6 +222,274 @@
     </div>
 
   </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="relative z-10 w-full px-6 py-20 md:pl-32 md:pr-12 max-w-[1800px] mx-auto">
+
+    <!-- Section Header -->
+    <div class="flex flex-col gap-4 mb-16">
+      <div class="flex items-center gap-4 text-gray-500 font-mono text-sm">
+        <span>01</span>
+        <div class="h-[1px] w-24 bg-gray-800"></div>
+        <span class="text-emerald-400">Selected Works</span>
+      </div>
+      <h2 class="text-4xl md:text-5xl font-bold text-white tracking-tight">Featured Projects</h2>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Project 1 -->
+      <div
+        class="group relative bg-white/[0.02] border border-white/[0.05] rounded-sm overflow-hidden hover:border-white/[0.1] transition-colors duration-300">
+        <div class="aspect-video w-full overflow-hidden bg-gray-900 relative">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
+          <!-- Placeholder Pattern -->
+          <div
+            class="w-full h-full bg-[radial-gradient(circle_at_50%_50%,_#333_1px,_transparent_1px)] bg-[length:20px_20px] opacity-20 group-hover:scale-105 transition-transform duration-500">
+          </div>
+        </div>
+        <div class="p-6 flex flex-col gap-4">
+          <div class="flex justify-between items-start">
+            <h3 class="text-xl font-semibold text-gray-200 group-hover:text-white transition-colors">Fintech Dashboard
+            </h3>
+            <i data-lucide="arrow-up-right"
+              class="w-5 h-5 text-gray-500 group-hover:text-emerald-400 transition-colors"></i>
+          </div>
+          <p class="text-gray-400 text-sm leading-relaxed line-clamp-2">
+            A comprehensive financial analytics platform with real-time data visualization and reporting tools.
+          </p>
+          <div class="flex flex-wrap gap-2 mt-2">
+            <span
+              class="px-2 py-1 text-xs font-mono text-emerald-400/80 bg-emerald-900/10 rounded border border-emerald-900/20">React</span>
+            <span
+              class="px-2 py-1 text-xs font-mono text-emerald-400/80 bg-emerald-900/10 rounded border border-emerald-900/20">D3.js</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div
+        class="group relative bg-white/[0.02] border border-white/[0.05] rounded-sm overflow-hidden hover:border-white/[0.1] transition-colors duration-300">
+        <div class="aspect-video w-full overflow-hidden bg-gray-900 relative">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
+          <div
+            class="w-full h-full bg-[linear-gradient(45deg,_#333_25%,_transparent_25%,_transparent_75%,_#333_75%,_#333),_linear-gradient(45deg,_#333_25%,_transparent_25%,_transparent_75%,_#333_75%,_#333)] bg-[length:20px_20px] bg-[position:0_0,_10px_10px] opacity-20 group-hover:scale-105 transition-transform duration-500">
+          </div>
+        </div>
+        <div class="p-6 flex flex-col gap-4">
+          <div class="flex justify-between items-start">
+            <h3 class="text-xl font-semibold text-gray-200 group-hover:text-white transition-colors">E-Commerce API</h3>
+            <i data-lucide="arrow-up-right"
+              class="w-5 h-5 text-gray-500 group-hover:text-emerald-400 transition-colors"></i>
+          </div>
+          <p class="text-gray-400 text-sm leading-relaxed line-clamp-2">
+            Headless e-commerce solution with high-performance inventory management and checkout flows.
+          </p>
+          <div class="flex flex-wrap gap-2 mt-2">
+            <span
+              class="px-2 py-1 text-xs font-mono text-blue-400/80 bg-blue-900/10 rounded border border-blue-900/20">Node.js</span>
+            <span
+              class="px-2 py-1 text-xs font-mono text-blue-400/80 bg-blue-900/10 rounded border border-blue-900/20">GraphQL</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div
+        class="group relative bg-white/[0.02] border border-white/[0.05] rounded-sm overflow-hidden hover:border-white/[0.1] transition-colors duration-300">
+        <div class="aspect-video w-full overflow-hidden bg-gray-900 relative">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
+          <div
+            class="w-full h-full bg-[repeating-linear-gradient(45deg,_#333_0,_#333_1px,_transparent_0,_transparent_50%)] bg-[length:10px_10px] opacity-20 group-hover:scale-105 transition-transform duration-500">
+          </div>
+        </div>
+        <div class="p-6 flex flex-col gap-4">
+          <div class="flex justify-between items-start">
+            <h3 class="text-xl font-semibold text-gray-200 group-hover:text-white transition-colors">AI Chat Interface
+            </h3>
+            <i data-lucide="arrow-up-right"
+              class="w-5 h-5 text-gray-500 group-hover:text-emerald-400 transition-colors"></i>
+          </div>
+          <p class="text-gray-400 text-sm leading-relaxed line-clamp-2">
+            Modern chat UI with streaming responses, markdown support, and voice input capabilities.
+          </p>
+          <div class="flex flex-wrap gap-2 mt-2">
+            <span
+              class="px-2 py-1 text-xs font-mono text-purple-400/80 bg-purple-900/10 rounded border border-purple-900/20">Next.js</span>
+            <span
+              class="px-2 py-1 text-xs font-mono text-purple-400/80 bg-purple-900/10 rounded border border-purple-900/20">OpenAI</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div
+        class="group relative bg-white/[0.02] border border-white/[0.05] rounded-sm overflow-hidden hover:border-white/[0.1] transition-colors duration-300">
+        <div class="aspect-video w-full overflow-hidden bg-gray-900 relative">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
+          <div
+            class="w-full h-full bg-[radial-gradient(#333_1px,_transparent_1px)] bg-[length:16px_16px] opacity-20 group-hover:scale-105 transition-transform duration-500">
+          </div>
+        </div>
+        <div class="p-6 flex flex-col gap-4">
+          <div class="flex justify-between items-start">
+            <h3 class="text-xl font-semibold text-gray-200 group-hover:text-white transition-colors">Travel Journal</h3>
+            <i data-lucide="arrow-up-right"
+              class="w-5 h-5 text-gray-500 group-hover:text-emerald-400 transition-colors"></i>
+          </div>
+          <p class="text-gray-400 text-sm leading-relaxed line-clamp-2">
+            Interactive map-based journaling app for travelers to document their journeys.
+          </p>
+          <div class="flex flex-wrap gap-2 mt-2">
+            <span
+              class="px-2 py-1 text-xs font-mono text-orange-400/80 bg-orange-900/10 rounded border border-orange-900/20">Vue</span>
+            <span
+              class="px-2 py-1 text-xs font-mono text-orange-400/80 bg-orange-900/10 rounded border border-orange-900/20">Mapbox</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 5 -->
+      <div
+        class="group relative bg-white/[0.02] border border-white/[0.05] rounded-sm overflow-hidden hover:border-white/[0.1] transition-colors duration-300">
+        <div class="aspect-video w-full overflow-hidden bg-gray-900 relative">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
+          <div
+            class="w-full h-full bg-[linear-gradient(to_right,_#333_1px,_transparent_1px),_linear-gradient(to_bottom,_#333_1px,_transparent_1px)] bg-[length:24px_24px] opacity-20 group-hover:scale-105 transition-transform duration-500">
+          </div>
+        </div>
+        <div class="p-6 flex flex-col gap-4">
+          <div class="flex justify-between items-start">
+            <h3 class="text-xl font-semibold text-gray-200 group-hover:text-white transition-colors">Task Manager</h3>
+            <i data-lucide="arrow-up-right"
+              class="w-5 h-5 text-gray-500 group-hover:text-emerald-400 transition-colors"></i>
+          </div>
+          <p class="text-gray-400 text-sm leading-relaxed line-clamp-2">
+            Collaborative task management tool with real-time updates and team workspaces.
+          </p>
+          <div class="flex flex-wrap gap-2 mt-2">
+            <span
+              class="px-2 py-1 text-xs font-mono text-pink-400/80 bg-pink-900/10 rounded border border-pink-900/20">Svelte</span>
+            <span
+              class="px-2 py-1 text-xs font-mono text-pink-400/80 bg-pink-900/10 rounded border border-pink-900/20">Firebase</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 6 -->
+      <div
+        class="group relative bg-white/[0.02] border border-white/[0.05] rounded-sm overflow-hidden hover:border-white/[0.1] transition-colors duration-300">
+        <div class="aspect-video w-full overflow-hidden bg-gray-900 relative">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
+          <div
+            class="w-full h-full bg-[radial-gradient(ellipse_at_center,_#333_1px,_transparent_1px)] bg-[length:12px_12px] opacity-20 group-hover:scale-105 transition-transform duration-500">
+          </div>
+        </div>
+        <div class="p-6 flex flex-col gap-4">
+          <div class="flex justify-between items-start">
+            <h3 class="text-xl font-semibold text-gray-200 group-hover:text-white transition-colors">Crypto Wallet</h3>
+            <i data-lucide="arrow-up-right"
+              class="w-5 h-5 text-gray-500 group-hover:text-emerald-400 transition-colors"></i>
+          </div>
+          <p class="text-gray-400 text-sm leading-relaxed line-clamp-2">
+            Secure non-custodial wallet for managing digital assets across multiple chains.
+          </p>
+          <div class="flex flex-wrap gap-2 mt-2">
+            <span
+              class="px-2 py-1 text-xs font-mono text-yellow-400/80 bg-yellow-900/10 rounded border border-yellow-900/20">Web3</span>
+            <span
+              class="px-2 py-1 text-xs font-mono text-yellow-400/80 bg-yellow-900/10 rounded border border-yellow-900/20">Solidity</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="relative z-10 w-full px-6 py-20 md:pl-32 md:pr-12 max-w-[1800px] mx-auto">
+
+    <div
+      class="w-full bg-[#0a0a0a] rounded-3xl p-8 md:p-16 lg:p-24 border border-white/[0.05] relative overflow-hidden group">
+
+      <!-- Background Glow -->
+      <div
+        class="absolute top-0 right-0 w-[500px] h-[500px] bg-emerald-900/10 blur-[120px] rounded-full pointer-events-none mix-blend-screen">
+      </div>
+
+      <div class="relative z-10 flex flex-col gap-16 md:gap-24">
+
+        <!-- Heading -->
+        <h2 class="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-white">
+          Let's build <br>
+          <span class="text-gray-600">together.</span>
+        </h2>
+
+        <!-- Grid Layout -->
+        <div class="flex flex-col md:flex-row justify-between gap-12 border-t border-white/10 pt-12">
+
+          <!-- Email -->
+          <div class="flex flex-col gap-4">
+            <span class="text-gray-500 font-mono text-sm">Email</span>
+            <a href="mailto:hello@josephpheenix.com"
+              class="flex items-center gap-3 text-xl md:text-2xl text-white hover:text-emerald-400 transition-colors group/email">
+              <i data-lucide="mail"
+                class="w-6 h-6 text-gray-400 group-hover/email:text-emerald-400 transition-colors"></i>
+              <span>hello@josephpheenix.com</span>
+            </a>
+          </div>
+
+          <!-- Schedule -->
+          <div class="flex flex-col gap-4 md:items-center">
+            <span class="text-gray-500 font-mono text-sm">Schedule</span>
+            <a href="#"
+              class="inline-flex items-center gap-2 px-6 py-3 bg-white text-black rounded-full font-medium hover:bg-gray-200 transition-colors w-fit">
+              <i data-lucide="calendar" class="w-4 h-4"></i>
+              <span>Book a call</span>
+            </a>
+          </div>
+
+          <!-- Social -->
+          <div class="flex flex-col gap-4 md:items-end">
+            <span class="text-gray-500 font-mono text-sm">Social</span>
+            <div class="flex gap-4">
+              <a href="#"
+                class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-black hover:bg-gray-200 transition-colors">
+                <i data-lucide="twitter" class="w-5 h-5"></i>
+              </a>
+              <a href="#"
+                class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-black hover:bg-gray-200 transition-colors">
+                <i data-lucide="instagram" class="w-5 h-5"></i>
+              </a>
+              <a href="#"
+                class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-black hover:bg-gray-200 transition-colors">
+                <i data-lucide="globe" class="w-5 h-5"></i>
+              </a>
+              <a href="#"
+                class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-black hover:bg-gray-200 transition-colors">
+                <i data-lucide="twitter" class="w-5 h-5"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Footer Copyright -->
+        <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-gray-600 text-sm font-mono pt-8">
+          <span>&copy; 2025 Joseph Pheenix — Available for freelance & contracts</span>
+          <span class="flex items-center gap-2">
+            <div class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
+            All systems operational
+          </span>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
 
   <!-- Init Icons -->
   <script>
