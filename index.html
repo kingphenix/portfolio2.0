@@ -11,29 +11,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap"
     rel="stylesheet">
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
 
-    /* Custom Noise Background */
-    .bg-noise {
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
-    }
-
-    /* Star field simulation */
-    .stars {
-      background-image:
-        radial-gradient(1px 1px at 20px 30px, #eee, rgba(0, 0, 0, 0)),
-        radial-gradient(1px 1px at 40px 70px, #fff, rgba(0, 0, 0, 0)),
-        radial-gradient(1px 1px at 50px 160px, #ddd, rgba(0, 0, 0, 0)),
-        radial-gradient(1px 1px at 90px 40px, #fff, rgba(0, 0, 0, 0)),
-        radial-gradient(1px 1px at 130px 80px, #fff, rgba(0, 0, 0, 0)),
-        radial-gradient(1px 1px at 160px 120px, #ddd, rgba(0, 0, 0, 0));
-      background-size: 200px 200px;
-      opacity: 0.3;
-    }
-  </style>
   <script>
     tailwind.config = {
       theme: {
@@ -132,7 +110,7 @@
     class="relative z-10 flex flex-col justify-center min-h-screen w-full px-6 pt-20 pb-12 md:pl-32 md:pr-12 max-w-[1800px] mx-auto">
 
     <!-- Intro -->
-    <div class="mb-2 md:mb-4 ml-1 md:ml-2 opacity-0 animate-fade-in-up">
+    <div class="mb-2 md:mb-4 ml-1 md:ml-2 hero-text">
       <p class="font-mono text-base md:text-lg text-gray-400 tracking-tight">
         Hi, I'm Joseph Pheenix
       </p>
@@ -140,11 +118,11 @@
 
     <!-- Massive Hero Title -->
     <div
-      class="flex flex-col font-bold text-[#E6E6E6] uppercase leading-[0.85] tracking-tighter select-none mix-blend-screen opacity-0 animate-fade-in-up-delayed">
-      <span class="text-[13vw] md:text-[11vw] lg:text-[10vw]">Artistic</span>
-      <span class="text-[13vw] md:text-[11vw] lg:text-[10vw]">Front-</span>
-      <span class="text-[13vw] md:text-[11vw] lg:text-[10vw]">End</span>
-      <span class="text-[13vw] md:text-[11vw] lg:text-[10vw]">Developer</span>
+      class="flex flex-col font-bold text-[#E6E6E6] uppercase leading-[0.85] tracking-tighter select-none mix-blend-screen hero-title">
+      <span class="text-[13vw] md:text-[11vw] lg:text-[10vw] hero-char">Artistic</span>
+      <span class="text-[13vw] md:text-[11vw] lg:text-[10vw] hero-char">Front-</span>
+      <span class="text-[13vw] md:text-[11vw] lg:text-[10vw] hero-char">End</span>
+      <span class="text-[13vw] md:text-[11vw] lg:text-[10vw] hero-char">Developer</span>
     </div>
 
   </main>
@@ -487,11 +465,8 @@
   </section>
 
 
-  <!-- Init Icons -->
-  <script>
-    lucide.createIcons();
-  </script>
-
+  <!-- Main Script -->
+  <script type="module" src="/src/main.js"></script>
 </body>
 
 </html>

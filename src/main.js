@@ -1,24 +1,141 @@
 import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+import gsap from 'gsap'
+import ScrollTrigger from 'gsap/ScrollTrigger'
+import Lenis from 'lenis'
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+// Initialize Lucide Icons
+if (window.lucide) {
+  window.lucide.createIcons();
+}
 
-setupCounter(document.querySelector('#counter'))
+// Register GSAP ScrollTrigger
+gsap.registerPlugin(ScrollTrigger)
+
+// Initialize Lenis for smooth scrolling
+const lenis = new Lenis({
+  duration: 1.2,
+  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+  direction: 'vertical',
+  gestureDirection: 'vertical',
+  smooth: true,
+  mouseMultiplier: 1,
+  smoothTouch: false,
+  touchMultiplier: 2,
+})
+
+function raf(time) {
+  lenis.raf(time)
+  requestAnimationFrame(raf)
+}
+
+requestAnimationFrame(raf)
+
+// Connect GSAP to Lenis
+lenis.on('scroll', ScrollTrigger.update)
+
+gsap.ticker.add((time) => {
+  lenis.raf(time * 1000)
+})
+
+gsap.ticker.lagSmoothing(0)
+
+// Animations
+const initAnimations = () => {
+
+  // Hero Text Reveal
+  const heroText = document.querySelector('.hero-text')
+  if (heroText) {
+    gsap.fromTo(heroText,
+      { opacity: 0, y: 20 },
+      { opacity: 1, y: 0, duration: 1, delay: 0.2, ease: 'power3.out' }
+    )
+  }
+
+  // Hero Title Stagger
+  const heroChars = document.querySelectorAll('.hero-char')
+  if (heroChars.length > 0) {
+    gsap.fromTo(heroChars,
+      { opacity: 0, y: 100, rotateX: -45 },
+      {
+        opacity: 1,
+        y: 0,
+        rotateX: 0,
+        duration: 1.5,
+        stagger: 0.1,
+        ease: 'power4.out',
+        delay: 0.5
+      }
+    )
+  }
+
+  // Section Reveals
+  const sections = document.querySelectorAll('section')
+  sections.forEach(section => {
+    gsap.fromTo(section,
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: section,
+          start: 'top 80%',
+          end: 'top 20%',
+          toggleActions: 'play none none reverse'
+        }
+      }
+    )
+  })
+
+  // Project Cards Stagger
+  const projectCards = document.querySelectorAll('#projects .group')
+  if (projectCards.length > 0) {
+    gsap.fromTo(projectCards,
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        stagger: 0.1,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: '#projects',
+          start: 'top 70%',
+        }
+      }
+    )
+  }
+
+  // Magnetic Buttons (Simple implementation)
+  const buttons = document.querySelectorAll('button, a.group')
+  buttons.forEach(btn => {
+    btn.addEventListener('mousemove', (e) => {
+      const rect = btn.getBoundingClientRect()
+      const x = e.clientX - rect.left - rect.width / 2
+      const y = e.clientY - rect.top - rect.height / 2
+
+      gsap.to(btn, {
+        x: x * 0.2,
+        y: y * 0.2,
+        duration: 0.3,
+        ease: 'power2.out'
+      })
+    })
+
+    btn.addEventListener('mouseleave', () => {
+      gsap.to(btn, {
+        x: 0,
+        y: 0,
+        duration: 0.3,
+        ease: 'power2.out'
+      })
+    })
+  })
+
+}
+
+// Run animations when DOM is ready
+document.addEventListener('DOMContentLoaded', initAnimations)
+// Also run immediately in case DOMContentLoaded already fired (module script)
+initAnimations()
