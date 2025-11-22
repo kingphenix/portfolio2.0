@@ -136,6 +136,34 @@ const initAnimations = () => {
 }
 
 // Run animations when DOM is ready
-document.addEventListener('DOMContentLoaded', initAnimations)
+document.addEventListener('DOMContentLoaded', () => {
+  initAnimations()
+
+  // Theme Toggle Logic
+  const themeToggle = document.getElementById('theme-toggle')
+  const html = document.documentElement
+
+  // Check local storage or system preference
+  if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    html.classList.add('dark')
+  } else {
+    html.classList.remove('dark')
+  }
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      html.classList.toggle('dark')
+      if (html.classList.contains('dark')) {
+        localStorage.theme = 'dark'
+      } else {
+        localStorage.theme = 'light'
+      }
+      // Re-initialize icons to ensure the correct sun/moon is shown if needed (though CSS handles visibility)
+      if (window.lucide) {
+        window.lucide.createIcons();
+      }
+    })
+  }
+})
 // Also run immediately in case DOMContentLoaded already fired (module script)
-initAnimations()
+// initAnimations() // Moved inside DOMContentLoaded to ensure elements exist
