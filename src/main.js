@@ -11,6 +11,9 @@ if (window.lucide) {
 // Register GSAP ScrollTrigger
 gsap.registerPlugin(ScrollTrigger)
 
+// Disabled Lenis smooth scrolling for better performance
+// If you want to re-enable it, uncomment the code below
+/*
 // Initialize Lenis for smooth scrolling
 const lenis = new Lenis({
   duration: 1.2,
@@ -38,6 +41,7 @@ gsap.ticker.add((time) => {
 })
 
 gsap.ticker.lagSmoothing(0)
+*/
 
 // Animations
 const initAnimations = () => {
@@ -135,19 +139,56 @@ const initAnimations = () => {
 
 }
 
+// Create floating particles
+const createParticles = () => {
+  const particlesContainer = document.getElementById('particles-container')
+  if (!particlesContainer) return
+
+  const particleCount = 15 // Reduced from 30 for better performance
+
+  for (let i = 0; i < particleCount; i++) {
+    const particle = document.createElement('div')
+    particle.className = 'particle'
+
+    // Random positioning
+    particle.style.left = `${Math.random() * 100}%`
+    particle.style.bottom = `${Math.random() * 20}%`
+
+    // Random size variation
+    const size = Math.random() * 3 + 2
+    particle.style.width = `${size}px`
+    particle.style.height = `${size}px`
+
+    // Random animation duration and delay
+    const duration = Math.random() * 15 + 15 // 15-30s
+    const delay = Math.random() * 10 // 0-10s
+    particle.style.animationDuration = `${duration}s`
+    particle.style.animationDelay = `${delay}s`
+
+    // Random opacity
+    particle.style.opacity = Math.random() * 0.5 + 0.2
+
+    particlesContainer.appendChild(particle)
+  }
+}
+
 // Run animations when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
   initAnimations()
-
+  createParticles() // Call the particle creation function
   // Theme Toggle Logic
   const themeToggle = document.getElementById('theme-toggle')
   const html = document.documentElement
 
-  // Check local storage or system preference
-  if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    html.classList.add('dark')
-  } else {
+  // Always default to dark mode unless explicitly set to light
+  if (localStorage.theme === 'light') {
     html.classList.remove('dark')
+  } else {
+    html.classList.add('dark')
+    // Set localStorage to dark if not already set
+    if (!localStorage.theme) {
+      localStorage.theme = 'dark'
+    }
   }
 
   if (themeToggle) {
