@@ -112,3 +112,10 @@ html.lenis body {
     animation: none;
   }
 }
+
+/* Tetris Background Styling */
+#tetris-container canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}

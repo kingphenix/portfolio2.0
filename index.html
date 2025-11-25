@@ -15,6 +15,7 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://raw.githack.com/strangerintheq/rgba/0.0.8/rgba.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
   <link
@@ -63,6 +64,9 @@
 
   <!-- Background Layers -->
   <div class="fixed inset-0 pointer-events-none z-0">
+    <!-- Tetris Background Container -->
+    <div id="tetris-container" class="absolute inset-0 opacity-0 dark:opacity-80 transition-opacity duration-300"></div>
+
     <div
       class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-100/20 via-white to-gray-50 dark:from-gray-900/20 dark:via-[#050505] dark:to-black transition-colors duration-300">
     </div>
@@ -109,14 +113,8 @@
     </a>
   </aside>
 
-  <!-- Status Badge & Theme Toggle -->
+  <!-- Status Badge -->
   <div class="absolute top-6 right-6 md:top-12 md:right-12 z-40 flex items-center gap-4">
-    <button id="theme-toggle"
-      class="w-10 h-10 rounded-full bg-white/[0.03] border border-white/[0.08] backdrop-blur-md flex items-center justify-center text-gray-400 hover:bg-white/[0.08] hover:text-white transition-all duration-300">
-      <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
-      <i data-lucide="moon" class="w-5 h-5 block dark:hidden"></i>
-    </button>
-
     <a href="#"
       class="inline-flex items-center gap-3 px-4 py-2 md:px-5 md:py-2.5 rounded-full bg-white/[0.03] border border-white/[0.08] backdrop-blur-md text-xs font-mono tracking-widest text-gray-400 hover:bg-white/[0.08] hover:text-gray-200 transition-all duration-300 group">
       <span class="relative flex h-2 w-2">
@@ -316,29 +314,29 @@
         class="group relative bg-black/[0.05] dark:bg-white/[0.02] border border-black/[0.1] dark:border-white/[0.05] rounded-sm overflow-hidden hover:border-black/[0.2] dark:hover:border-white/[0.1] transition-colors duration-300">
         <div class="aspect-video w-full overflow-hidden bg-gray-900 relative">
           <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
-          <!-- Placeholder Pattern -->
-          <div
-            class="w-full h-full bg-[radial-gradient(circle_at_50%_50%,_#333_1px,_transparent_1px)] bg-[length:20px_20px] opacity-20 group-hover:scale-105 transition-transform duration-500">
-          </div>
+          <img src="src/assets/images/project-1.png" alt="Paintball With Policy project screenshot"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
         </div>
         <div class="p-6 flex flex-col gap-4">
           <div class="flex justify-between items-start">
             <h3
               class="text-xl font-semibold text-gray-900 dark:text-gray-200 group-hover:text-black dark:group-hover:text-white transition-colors">
-              Fintech Dashboard
+              Paintball With Policy
             </h3>
             <i data-lucide="arrow-up-right"
               class="w-5 h-5 text-gray-500 group-hover:text-emerald-400 transition-colors"></i>
           </div>
           <p
             class="text-cyan-500 dark:text-cyan-400 text-sm leading-relaxed line-clamp-2 transition-colors duration-300">
-            A comprehensive financial analytics platform with real-time data visualization and reporting tools.
+            A stunning webshop built for one of the biggest paintball brands in Nigeria.
           </p>
           <div class="flex flex-wrap gap-2 mt-2">
             <span
               class="px-2 py-1 text-xs font-mono text-emerald-400/80 bg-emerald-900/10 rounded border border-emerald-900/20">React</span>
             <span
-              class="px-2 py-1 text-xs font-mono text-emerald-400/80 bg-emerald-900/10 rounded border border-emerald-900/20">D3.js</span>
+              class="px-2 py-1 text-xs font-mono text-emerald-400/80 bg-emerald-900/10 rounded border border-emerald-900/20">Tailwind</span>
+            <span
+              class="px-2 py-1 text-xs font-mono text-emerald-400/80 bg-emerald-900/10 rounded border border-emerald-900/20">Typescript</span>
           </div>
         </div>
       </div>
@@ -354,7 +352,8 @@
         </div>
         <div class="p-6 flex flex-col gap-4">
           <div class="flex justify-between items-start">
-            <h3 class="text-xl font-semibold text-gray-200 group-hover:text-white transition-colors">E-Commerce API</h3>
+            <h3 class="text-xl font-semibold text-gray-200 group-hover:text-white transition-colors">E-Commerce Store
+            </h3>
             <i data-lucide="arrow-up-right"
               class="w-5 h-5 text-gray-500 group-hover:text-emerald-400 transition-colors"></i>
           </div>
@@ -405,25 +404,27 @@
         class="group relative bg-black/[0.05] dark:bg-white/[0.02] border border-black/[0.1] dark:border-white/[0.05] rounded-sm overflow-hidden hover:border-black/[0.2] dark:hover:border-white/[0.1] transition-colors duration-300">
         <div class="aspect-video w-full overflow-hidden bg-gray-900 relative">
           <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
-          <div
-            class="w-full h-full bg-[radial-gradient(#333_1px,_transparent_1px)] bg-[length:16px_16px] opacity-20 group-hover:scale-105 transition-transform duration-500">
-          </div>
+          <img src="src/assets/images/project-3.png" alt="Framer Portfolio Site project screenshot"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
         </div>
         <div class="p-6 flex flex-col gap-4">
           <div class="flex justify-between items-start">
-            <h3 class="text-xl font-semibold text-gray-200 group-hover:text-white transition-colors">Travel Journal</h3>
+            <h3 class="text-xl font-semibold text-gray-200 group-hover:text-white transition-colors">Framer Portfolio
+              Site</h3>
             <i data-lucide="arrow-up-right"
               class="w-5 h-5 text-gray-500 group-hover:text-emerald-400 transition-colors"></i>
           </div>
           <p
             class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed line-clamp-2 transition-colors duration-300">
-            Interactive map-based journaling app for travelers to document their journeys.
+            A sleek and modern portfolio site built with Framer to showcase a clients skills.
           </p>
           <div class="flex flex-wrap gap-2 mt-2">
             <span
-              class="px-2 py-1 text-xs font-mono text-orange-400/80 bg-orange-900/10 rounded border border-orange-900/20">Vue</span>
+              class="px-2 py-1 text-xs font-mono text-orange-400/80 bg-orange-900/10 rounded border border-orange-900/20">Framer</span>
             <span
-              class="px-2 py-1 text-xs font-mono text-orange-400/80 bg-orange-900/10 rounded border border-orange-900/20">Mapbox</span>
+              class="px-2 py-1 text-xs font-mono text-orange-400/80 bg-orange-900/10 rounded border border-orange-900/20">HTML</span>
+            <span
+              class="px-2 py-1 text-xs font-mono text-orange-400/80 bg-orange-900/10 rounded border border-orange-900/20">CSS</span>
           </div>
         </div>
       </div>
@@ -461,25 +462,28 @@
         class="group relative bg-black/[0.05] dark:bg-white/[0.02] border border-black/[0.1] dark:border-white/[0.05] rounded-sm overflow-hidden hover:border-black/[0.2] dark:hover:border-white/[0.1] transition-colors duration-300">
         <div class="aspect-video w-full overflow-hidden bg-gray-900 relative">
           <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
-          <div
-            class="w-full h-full bg-[radial-gradient(ellipse_at_center,_#333_1px,_transparent_1px)] bg-[length:12px_12px] opacity-20 group-hover:scale-105 transition-transform duration-500">
-          </div>
+          <img src="src/assets/images/project-2.png" alt="Crypto Wallet project screenshot"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
         </div>
         <div class="p-6 flex flex-col gap-4">
           <div class="flex justify-between items-start">
-            <h3 class="text-xl font-semibold text-gray-200 group-hover:text-white transition-colors">Crypto Wallet</h3>
+            <h3 class="text-xl font-semibold text-gray-200 group-hover:text-white transition-colors">Crypto Price Track
+            </h3>
             <i data-lucide="arrow-up-right"
               class="w-5 h-5 text-gray-500 group-hover:text-emerald-400 transition-colors"></i>
           </div>
           <p
             class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed line-clamp-2 transition-colors duration-300">
-            Secure non-custodial wallet for managing digital assets across multiple chains.
+            A real-time cryptocurrency monitoring webapp to help users track market trends, prices, and portfolio
+            performance.
           </p>
           <div class="flex flex-wrap gap-2 mt-2">
             <span
-              class="px-2 py-1 text-xs font-mono text-yellow-400/80 bg-yellow-900/10 rounded border border-yellow-900/20">Web3</span>
+              class="px-2 py-1 text-xs font-mono text-yellow-400/80 bg-yellow-900/10 rounded border border-yellow-900/20">React</span>
             <span
-              class="px-2 py-1 text-xs font-mono text-yellow-400/80 bg-yellow-900/10 rounded border border-yellow-900/20">Solidity</span>
+              class="px-2 py-1 text-xs font-mono text-yellow-400/80 bg-yellow-900/10 rounded border border-yellow-900/20">Typescript</span>
+            <span
+              class="px-2 py-1 text-xs font-mono text-yellow-400/80 bg-yellow-900/10 rounded border border-yellow-900/20">ShadCN</span>
           </div>
         </div>
       </div>
@@ -571,6 +575,7 @@
 
   <!-- Main Script -->
   <script type="module" src="/src/main.js"></script>
+  <script type="module" src="/src/tetris.js"></script>
 </body>
 
 </html>
