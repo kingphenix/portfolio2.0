@@ -172,10 +172,56 @@ const createParticles = () => {
   }
 }
 
+// Language Switcher for Hero Text (Apple-style)
+const initLanguageSwitcher = () => {
+  const heroChar = document.querySelector('.hero-char')
+  if (!heroChar) return
+
+  const languages = [
+    'Artistic',      // English
+    'Artistique',    // French
+    'Artístico',     // Spanish
+    'Artistico'      // Italian
+  ]
+
+  let currentIndex = 0
+
+  const switchLanguage = () => {
+    // Fade out
+    gsap.to(heroChar, {
+      opacity: 0,
+      y: -20,
+      duration: 0.5,
+      ease: 'power2.in',
+      onComplete: () => {
+        // Change text
+        currentIndex = (currentIndex + 1) % languages.length
+        heroChar.textContent = languages[currentIndex]
+
+        // Fade in
+        gsap.to(heroChar, {
+          opacity: 1,
+          y: 0,
+          duration: 0.5,
+          ease: 'power2.out'
+        })
+      }
+    })
+  }
+
+  // Start switching after initial animation completes (2 seconds delay)
+  setTimeout(() => {
+    // Switch every 2 seconds
+    setInterval(switchLanguage, 2000)
+  }, 2000)
+}
+
 // Run animations when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
   initAnimations()
   createParticles() // Call the particle creation function
+  initLanguageSwitcher() // Initialize language switcher
+
   // Theme Toggle Logic
   const themeToggle = document.getElementById('theme-toggle')
   const html = document.documentElement
