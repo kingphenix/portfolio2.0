@@ -76,10 +76,63 @@
   <nav
     class="fixed top-0 left-0 right-0 z-50 flex justify-between items-center p-6 md:hidden bg-gradient-to-b from-white/80 to-transparent dark:from-black/80 backdrop-blur-sm transition-colors duration-300">
     <span class="font-mono text-sm tracking-widest text-gray-600 dark:text-gray-400">JP.</span>
-    <button class="text-gray-400 hover:text-white transition-colors">
+    <button id="mobile-menu-button" class="text-gray-400 hover:text-white transition-colors">
       <i data-lucide="menu" class="w-6 h-6"></i>
     </button>
   </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu-overlay"
+    class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[60] opacity-0 pointer-events-none transition-opacity duration-300 md:hidden">
+  </div>
+
+  <!-- Mobile Menu Panel -->
+  <div id="mobile-menu"
+    class="fixed top-0 right-0 bottom-0 w-[280px] bg-white dark:bg-gray-900 z-[70] transform translate-x-full transition-transform duration-300 md:hidden shadow-2xl">
+    <div class="flex flex-col h-full">
+      <!-- Menu Header -->
+      <div class="flex justify-between items-center p-6 border-b border-gray-200 dark:border-gray-800">
+        <span class="font-mono text-sm tracking-widest text-gray-600 dark:text-gray-400">MENU</span>
+        <button id="mobile-menu-close"
+          class="text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+      <!-- Menu Links -->
+      <nav class="flex flex-col gap-2 p-6 flex-1">
+        <a href="#"
+          class="mobile-menu-link flex items-center gap-4 px-4 py-3 rounded-lg text-gray-900 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+          <i data-lucide="home" class="w-5 h-5"></i>
+          <span class="font-medium">Home</span>
+        </a>
+        <a href="#about"
+          class="mobile-menu-link flex items-center gap-4 px-4 py-3 rounded-lg text-gray-900 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+          <i data-lucide="user" class="w-5 h-5"></i>
+          <span class="font-medium">About</span>
+        </a>
+        <a href="#projects"
+          class="mobile-menu-link flex items-center gap-4 px-4 py-3 rounded-lg text-gray-900 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+          <i data-lucide="briefcase" class="w-5 h-5"></i>
+          <span class="font-medium">Projects</span>
+        </a>
+        <a href="#contact"
+          class="mobile-menu-link flex items-center gap-4 px-4 py-3 rounded-lg text-gray-900 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+          <i data-lucide="mail" class="w-5 h-5"></i>
+          <span class="font-medium">Contact</span>
+        </a>
+      </nav>
+
+      <!-- Menu Footer -->
+      <div class="p-6 border-t border-gray-200 dark:border-gray-800">
+        <div class="flex items-center gap-2 text-gray-500 text-xs font-mono">
+          <div class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
+          <span>Available for projects</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <!-- Desktop Sidebar Navigation -->
   <aside

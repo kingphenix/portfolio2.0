@@ -216,11 +216,46 @@ const initLanguageSwitcher = () => {
   }, 2000)
 }
 
+// Mobile Menu Functionality
+const initMobileMenu = () => {
+  const menuButton = document.getElementById('mobile-menu-button')
+  const menuClose = document.getElementById('mobile-menu-close')
+  const menu = document.getElementById('mobile-menu')
+  const overlay = document.getElementById('mobile-menu-overlay')
+  const menuLinks = document.querySelectorAll('.mobile-menu-link')
+
+  if (!menuButton || !menu || !overlay) return
+
+  const openMenu = () => {
+    menu.classList.remove('translate-x-full')
+    overlay.classList.remove('opacity-0', 'pointer-events-none')
+    document.body.style.overflow = 'hidden'
+  }
+
+  const closeMenu = () => {
+    menu.classList.add('translate-x-full')
+    overlay.classList.add('opacity-0', 'pointer-events-none')
+    document.body.style.overflow = ''
+  }
+
+  menuButton.addEventListener('click', openMenu)
+  menuClose?.addEventListener('click', closeMenu)
+  overlay.addEventListener('click', closeMenu)
+
+  // Close menu when clicking on a link
+  menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      closeMenu()
+    })
+  })
+}
+
 // Run animations when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
   initAnimations()
   createParticles() // Call the particle creation function
   initLanguageSwitcher() // Initialize language switcher
+  initMobileMenu() // Initialize mobile menu
 
   // Theme Toggle Logic
   const themeToggle = document.getElementById('theme-toggle')
