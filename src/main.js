@@ -253,7 +253,9 @@ const initMobileMenu = () => {
 // Run animations when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
   initAnimations()
-  createParticles() // Call the particle creation function
+  initAnimations()
+  // createParticles() // Removed for cleaner look
+  initLanguageSwitcher() // Initialize language switcher
   initLanguageSwitcher() // Initialize language switcher
   initMobileMenu() // Initialize mobile menu
 
